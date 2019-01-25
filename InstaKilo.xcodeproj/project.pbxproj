@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177AD6AA21F903A2006912E1 /* PhotoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 177AD6A921F903A2006912E1 /* PhotoData.m */; };
+		177AD6B021F90766006912E1 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 177AD6AF21F90766006912E1 /* MyCollectionViewCell.m */; };
+		177AD6B321F9315F006912E1 /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177AD6B221F9315F006912E1 /* MyHeaderView.m */; };
 		178D7AB521F8FA68004B6A2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 178D7AB421F8FA68004B6A2E /* AppDelegate.m */; };
 		178D7AB821F8FA68004B6A2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178D7AB721F8FA68004B6A2E /* ViewController.m */; };
 		178D7ABB21F8FA68004B6A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178D7AB921F8FA68004B6A2E /* Main.storyboard */; };
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		177AD6A821F903A2006912E1 /* PhotoData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoData.h; sourceTree = "<group>"; };
+		177AD6A921F903A2006912E1 /* PhotoData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoData.m; sourceTree = "<group>"; };
+		177AD6AE21F90766006912E1 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		177AD6AF21F90766006912E1 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		177AD6B121F9315F006912E1 /* MyHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHeaderView.h; sourceTree = "<group>"; };
+		177AD6B221F9315F006912E1 /* MyHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHeaderView.m; sourceTree = "<group>"; };
 		178D7AB021F8FA68004B6A2E /* InstaKilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178D7AB321F8FA68004B6A2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		178D7AB421F8FA68004B6A2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +114,12 @@
 				178D7AB421F8FA68004B6A2E /* AppDelegate.m */,
 				178D7AB621F8FA68004B6A2E /* ViewController.h */,
 				178D7AB721F8FA68004B6A2E /* ViewController.m */,
+				177AD6B121F9315F006912E1 /* MyHeaderView.h */,
+				177AD6B221F9315F006912E1 /* MyHeaderView.m */,
+				177AD6AE21F90766006912E1 /* MyCollectionViewCell.h */,
+				177AD6AF21F90766006912E1 /* MyCollectionViewCell.m */,
+				177AD6A821F903A2006912E1 /* PhotoData.h */,
+				177AD6A921F903A2006912E1 /* PhotoData.m */,
 				178D7AB921F8FA68004B6A2E /* Main.storyboard */,
 				178D7ABC21F8FA69004B6A2E /* Assets.xcassets */,
 				178D7ABE21F8FA69004B6A2E /* LaunchScreen.storyboard */,
@@ -264,7 +279,10 @@
 			files = (
 				178D7AB821F8FA68004B6A2E /* ViewController.m in Sources */,
 				178D7AC321F8FA69004B6A2E /* main.m in Sources */,
+				177AD6AA21F903A2006912E1 /* PhotoData.m in Sources */,
+				177AD6B321F9315F006912E1 /* MyHeaderView.m in Sources */,
 				178D7AB521F8FA68004B6A2E /* AppDelegate.m in Sources */,
+				177AD6B021F90766006912E1 /* MyCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +460,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Matthew.InstaKilo;
+				PRODUCT_BUNDLE_IDENTIFIER = Matthew.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,7 +477,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Matthew.InstaKilo;
+				PRODUCT_BUNDLE_IDENTIFIER = Matthew.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
