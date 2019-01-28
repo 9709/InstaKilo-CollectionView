@@ -10,7 +10,8 @@
 
 @implementation MyCollectionViewCell
 
-- (void)addImageFrom: (PhotoData *)images {
+- (void)addImageFrom: (PhotoData *)images
+{
     self.myImage.image = images.imageName;
 }
 

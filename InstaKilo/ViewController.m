@@ -60,28 +60,30 @@
     PhotoData *photoData15 = [[PhotoData alloc] initWithImageName:[UIImage imageNamed:@"People"] andSubject:@"People" andLocation:@"Richmond"];
     
     self.listOfImages = [@[
-                            photoData1, photoData2, photoData3, photoData4, photoData5, photoData6, photoData7, photoData8, photoData9, photoData10, photoData11, photoData12, photoData13, photoData14, photoData15
-                            ] mutableCopy];
-                         
-        
+                           photoData1, photoData2, photoData3, photoData4, photoData5, photoData6, photoData7, photoData8, photoData9, photoData10, photoData11, photoData12, photoData13, photoData14, photoData15
+                           ] mutableCopy];
+    
+    
+    self.uniqueSubjects = [[NSMutableArray alloc] init];
     
     for (int x=0; x < self.listOfImages.count; x++)
     {
         PhotoData *photoData = self.listOfImages[x]; //photo 1
-        NSMutableArray *uniqueSubejcts = self.uniqueSubjects; //[]
+        NSMutableArray *uniqueSubjects = self.uniqueSubjects; //[]
         NSString *subject = photoData.subject; // "animal"
-        NSLog(@"%@", uniqueSubejcts);
-//        if (photo1 has subject-"animal", then add subject-"animal" to uniqueSubejcts.  Otherwise, check photo2)
+//        NSLog(@"%@", subject);
+        //        if (photo1 has subject-"animal", then add subject-"animal" to uniqueSubejcts.  Otherwise, check photo2)
         
-        if ([uniqueSubejcts containsObject:subject] == YES )
+        if ([uniqueSubjects containsObject:subject])
         {
-            return;
         } else
-        {
-            [uniqueSubejcts addObject:subject];
-        }
+        
+            [uniqueSubjects addObject:subject];
+//            NSLog(@"%@", uniqueSubjects);
+        
     }
-    
+                NSLog(@"%@", self.uniqueSubjects);
+
 }
 
 // ============================================================================================================================
@@ -107,7 +109,7 @@
                                    cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     MyCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"myCell" forIndexPath:indexPath];
-        NSLog(@"%li", indexPath.row);
+    NSLog(@"%li", indexPath.row);
     PhotoData *photoData = self.listOfImages[indexPath.row];
     [cell addImageFrom:photoData];
     
@@ -140,8 +142,11 @@
 // Setting Number of Sections
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 7;
+    return self.uniqueSubjects.count;
 }
+
+
+
 
 // Creating header
 - (UICollectionReusableView *)collectionView: (UICollectionView *)collectionView
@@ -151,7 +156,7 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader])
     {
         MyHeaderView *headerView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MyHeaderView" forIndexPath:indexPath];
-     
+        
         NSLog(@"header: %li", (long)indexPath.section);
         
         [headerView addHeaderTitleFrom:self.uniqueSubjects[indexPath.section]];
